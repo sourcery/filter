@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require 'dotenv'
+Dotenv.load
+require "sequel"
+require "filter"
+require "./spec/models"
+
+require "irb"
+IRB.start

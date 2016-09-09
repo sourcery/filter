@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+bundle install
+
+if [ "$(which psql)" = "" ]; then
+  echo "Could not find psql command. Please install psql."
+  exit 1
+fi
+
+setup.rb
